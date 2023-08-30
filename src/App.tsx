@@ -1,6 +1,7 @@
 import { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
+
 const IssueList = lazy(() => import('./pages/IssueList'));
 const IssueDetail = lazy(() => import('./pages/IssueDetail'));
 const NotFound = lazy(() => import('./pages/NotFound'));
