@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import useIssueList from '../api/useIssueList';
+import { useGetIssueList } from '../api/useIssueList';
 import IssueItem from '../components/issue/IssueItem';
 import WantedAd from '../components/banner/WantedAd';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
@@ -7,7 +7,7 @@ import useIntersectionObserver from '../hooks/useIntersectionObserver';
 function IssueList() {
 	const [pageNumber, setPageNumber] = useState(1);
 	const [isLoding, setIsLoding] = useState(true);
-	const { issue, error } = useIssueList(pageNumber, setIsLoding);
+	const { issue, error } = useGetIssueList(pageNumber, setIsLoding);
 
 	const targetRef = useRef(null);
 	interface Issue {
